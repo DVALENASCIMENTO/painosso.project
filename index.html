@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oração do Pai Nosso</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Oração do Pai Nosso</h1>
+        <div class="prayer">
+            <a href="#" class="topic" data-popup="pai_nosso.json">"Pai nosso"</a><br>
+            <a href="#" class="topic" data-popup="que_estas_nos_ceus.json">"que estás nos céus"</a><br>
+            <a href="#" class="topic" data-popup="santificado_seja_o_teu_nome.json">"santificado seja o teu nome"</a><br>
+            <a href="#" class="topic" data-popup="venha_o_teu_reino.json">"venha o teu reino"</a><br>
+            <a href="#" class="topic" data-popup="facase_a_tua_vontade.json">"faça-se a tua vontade, assim na terra como no céu"</a><br>
+            <a href="#" class="topic" data-popup="o_pao_nosso.json">"o pão nosso de cada dia dá-nos hoje"</a><br>
+            <a href="#" class="topic" data-popup="perdoa_nos_as_nossas_dividas.json">"perdoa-nos as nossas dívidas, assim como nós temos perdoado aos nossos devedores"</a><br>
+            <a href="#" class="topic" data-popup="nao_nos_deixes_cair_em_tentacao.json">"não nos deixes cair em tentação"</a><br>
+            <a href="#" class="topic" data-popup="mas_livra_nos_do_mal.json">"mas livra-nos do mal"</a><br>
+            <a href="#" class="topic" data-popup="teu_e_o_reino.json">"[pois 'teu é o reino, o poder e a glória para sempre']"</a><br>
+            <a href="#" class="topic" data-popup="amen.json">"Amém."</a>
+        </div>
+        <button class="help-btn">?</button>
+    </div>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <div class="popup-controls">
+                    <button class="play-btn"></button>
+                    <button class="font-increase">A+</button>
+                    <button class="font-decrease">A-</button>
+                </div>
+                <span class="close">&times;</span>
+            </div>
+            <div id="popup-text"></div>
+        </div>
+    </div>
+    <div id="help-popup" class="popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <div class="popup-controls">
+                    <button class="play-btn"></button>
+                    <button class="font-increase">A+</button>
+                    <button class="font-decrease">A-</button>
+                </div>
+                <span class="close close-help">&times;</span>
+            </div>
+            <p>Descrição do projeto e suas funcionalidades: <br>
+            Este projeto exibe a oração do Pai Nosso com a possibilidade de visualizar detalhes sobre cada parte da oração em popups. Os usuários podem interagir com o conteúdo através dos botões de controle para ajustar o tamanho da fonte e ativar o leitor de voz. Além disso, o botão de ajuda fornece informações adicionais sobre o funcionamento do projeto.</p>
+        </div>
+    </div>
+    <audio id="sound/sound.mp3"></audio>
+    <script src="js/script.js"></script>
+    <footer>
+        <p>Diego Nascimento - Analista e Desenvolvedor de Sistemas</p>
+        <p>
+            <a href="https://github.com/DVALENASCIMENTO" target="_blank">GitHub</a> |
+            <a href="https://www.linkedin.com/in/diego-vale-do-nascimento-48212215b/" target="_blank">LinkedIn</a>
+        </p>
+    </footer>
+</body>
+</html>

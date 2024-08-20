@@ -1,0 +1,142 @@
+body {
+    font-family: 'Georgia', serif;
+    background: url('images/papiro.jpg') no-repeat center center;
+    background-size: cover;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    text-align: center; /* Centraliza o texto dentro da container */
+}
+
+.title {
+    margin-top: 20px;
+    font-size: 2em;
+    text-shadow: 1px 1px 2px #aaa;
+}
+
+.prayer {
+    background: rgba(255, 255, 255, 0.8); /* Fundo branco semitransparente para contraste */
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    text-align: center; /* Centraliza o texto dentro da prayer */
+    max-width: 800px;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.topic {
+    display: block;
+    font-size: 1.2em;
+    color: #2a2a2a;
+    text-decoration: none;
+    margin: 10px 0;
+}
+
+.topic:hover {
+    text-decoration: underline;
+}
+
+.help-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5em;
+    background: #f4a261;
+    border: none;
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    overflow: auto;
+}
+
+.popup-content {
+    background: white;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    max-height: 80vh;
+    overflow-y: auto;
+    text-align: center; /* Centraliza o texto dentro do popup */
+}
+
+.popup-header {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza os botões */
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.popup-controls {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espaçamento entre os botões */
+}
+
+.popup-controls button {
+    background: #2a9d8f;
+    border: none;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    font-size: 1.2em; /* Tamanho da fonte ajustado para ícones */
+}
+
+.close, .close-help {
+    font-size: 1.5em;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#popup-text {
+    font-size: 1.2em;
+    margin: 0; /* Remover margem para centralizar melhor */
+}
+
+footer {
+    margin-top: 20px;
+    background: #2a9d8f;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Ícones para botões */
+.play-btn::before {
+    content: '\25B6'; /* Símbolo Play */
+}
+
+.play-btn.paused::before {
+    content: '\23F8'; /* Símbolo Pause */
+}
