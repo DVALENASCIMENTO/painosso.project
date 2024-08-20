@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Fecha o popup just
+    // Fecha o popup ao clicar no botão de fechar
     closeBtn.addEventListener('click', () => {
         popup.style.display = 'none';
         if (isSpeaking) {
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('help-popup').style.display = 'block';
     });
 
-    // Fecha o popup de ajuda
+    // Fecha o popup de ajuda ao clicar no botão de fechar
     closeHelpBtn.addEventListener('click', () => {
         document.getElementById('help-popup').style.display = 'none';
     });
