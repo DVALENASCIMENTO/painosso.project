@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Fecha o popup
+    // Fecha o popup just
     closeBtn.addEventListener('click', () => {
         popup.style.display = 'none';
         if (isSpeaking) {
