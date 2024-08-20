@@ -12,6 +12,14 @@ document.addEventListener('DOMContentLoaded', () => {
     let isSpeaking = false;
     let speechSynthesis = window.speechSynthesis;
 
+    // Toca o áudio de fundo automaticamente
+    const backgroundSound = document.getElementById('background-sound');
+    if (backgroundSound) {
+        backgroundSound.play().catch(error => {
+            console.error('Erro ao tocar o áudio:', error);
+        });
+    }
+
     // Abre o popup com o conteúdo do tópico
     topics.forEach(topic => {
         topic.addEventListener('click', (e) => {
