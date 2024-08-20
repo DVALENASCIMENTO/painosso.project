@@ -16,11 +16,21 @@ document.addEventListener('DOMContentLoaded', () => {
     topics.forEach(topic => {
         topic.addEventListener('click', (e) => {
             e.preventDefault();
-            fetch(`data/${topic.getAttribute('data-popup')}`)
-                .then(response => response.json())
+            const dataPopup = topic.getAttribute('data-popup');
+            fetch(`data/${dataPopup}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok: ' + response.statusText);
+                    }
+                    return response.json();
+                })
                 .then(data => {
-                    popupText.innerHTML = data.content;
-                    popup.style.display = 'block';
+                    if (data.content && typeof data.content === 'string') {
+                        popupText.innerHTML = data.content;
+                        popup.style.display = 'block';
+                    } else {
+                        throw new Error('Invalid data format');
+                    }
                 })
                 .catch(error => {
                     console.error('Erro ao carregar o conteúdo:', error);
